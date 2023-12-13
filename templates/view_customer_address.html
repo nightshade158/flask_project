@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Customer Address Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Address Information</h1>
+    <table>
+        <tr>
+            <th>Customer ID</th>
+            <th>House Number</th>
+            <th>Locality</th>
+            <th>City</th>
+            <th>Pincode</th>
+        </tr>
+        {% for info in address_info %}
+        <tr>
+            <td>{{ info[0] }}</td>
+            <td>{{ info[1] }}</td>
+            <td>{{ info[2] }}</td>
+            <td>{{ info[3] }}</td>
+            <td>{{ info[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

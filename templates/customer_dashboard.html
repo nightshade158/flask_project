@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #F4E9D9;
+        }
+
+        h1 {
+            color: #FF5733;
+            font-size: 28px;
+            text-shadow: 2px 2px 4px #FFA07A;
+        }
+
+        label.heading {
+            font-weight: bold;
+            color: #FF5733;
+            font-size: 20px;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        table td {
+            text-align: left;
+            padding-right: 10px;
+            color: #FF5733;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        table td.value {
+            color: #008B8B;
+            font-size: 18px;
+        }
+
+        table td a {
+            text-decoration: underline;
+        }
+
+        input[type="submit"] {
+            background-color: #FF5733;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, <span id="customerName">{{ details[3] }}</span>!</h1><br><br>
+
+    <form method="post" action="/update_customer/{{ details[0] }}">
+        <label class="heading">Here are your details.</label><br><br>
+
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td class="value">{{ details[3] }}</td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td class="value">{{ details[4] }}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td class="value"><a href="mailto:{{ details[1] }}">{{ details[1] }}</a></td>
+            </tr>
+            <tr>
+                <td>Contact:</td>
+                <td class="value">{{ details[5] }}</td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td class="value">{{ details[6] }}</td>
+            </tr>
+            <tr>
+                <td>House No:</td>
+                <td class="value">{{ details[8] }}</td>
+            </tr>
+            <tr>
+                <td>Locality:</td>
+                <td class="value">{{ details[9] }}</td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td class="value">{{ details[10] }}</td>
+            </tr>
+            <tr>
+                <td>Pincode:</td>
+                <td class="value">{{ details[11] }}</td>
+            </tr>
+            <tr>
+                <td>Wallet ID:</td>
+                <td class="value">{{ details[7] }}</td>
+            </tr>
+        </table>
+
+        <br>
+        <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center;">
+        <li style="margin: 10px;">
+            <a href="{{ url_for('index') }}" style="text-decoration: none; color: #007bff; background-color: #e6e6e6; padding: 10px 20px; border-radius: 5px;">Logout</a>
+        </li>
+        </ul>
+    </form>
+
+    <script>
+        // JavaScript code for interactivity
+        const customerName = document.getElementById('customerName');
+        customerName.addEventListener('click', () => {
+            alert('You clicked on the customer name!');
+        });
+    </script>
+</body>
+</html>

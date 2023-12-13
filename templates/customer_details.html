@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Details</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Customer Details</h1>
+
+    <ul style="list-style: none; padding: 0; text-align: left; max-width: 400px; margin: 20px auto; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); padding: 20px;">
+
+        {% for key, value in customer_details.items() %}
+            <li style="margin: 10px 0; font-size: 16px;">
+                <strong>{{ key }}:</strong> {{ value }}
+            </li>
+        {% endfor }
+
+    </ul>
+</body>
+</html>

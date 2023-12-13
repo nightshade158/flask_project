@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+    <style>
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        td{
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+    </head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Order Confirmation</h1>
+
+    <p style="font-size: 16px; color: #333;">Order placed successfully</p>
+
+    <p style="font-size: 16px; color: #333;">Order ID: {{ order_id }}</p>
+
+    <p style="font-size: 16px; color: #333;">Assigned Delivery Agent ID: {{ delivery_agent_id }}</p>
+
+    <p style="font-size: 16px; color: #333;">Customer ID: {{ customer_id }}</p>
+
+    <p style="font-size: 16px; color: #333;">Transaction ID: {{ transaction_id }}</p>
+
+    <p style="font-size: 16px; color: #333;">Date: {{ date }}</p>
+
+    <p style="font-size: 16px; color: #333;">Bill Amount: ${{ bill_amount }}</p>
+
+    <h2 style="color: #333; margin-top: 20px;">BILL</h2>
+
+    <div>
+        {{ bill_table | safe }}
+    </div>
+</body>
+</html>

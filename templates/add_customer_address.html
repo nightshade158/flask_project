@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Customer Address</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Add Customer Address</h1>
+
+    <form method="POST" style="margin: 20px auto; max-width: 400px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;"">
+
+        <input type="hidden" name="customer_id" value="{{ customer_id }}">
+
+        <label for="house_no" style="display: block; margin-top: 10px;">House Number: </label>
+        <input type="text" name="house_no" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <label for="locality" style="display: block; margin-top: 10px;">Locality: </label>
+        <input type="text" name="locality" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <label for="city" style="display: block; margin-top: 10px;">City: </label>
+        <input type="text" name="city" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <label for="pincode" style="display: block; margin-top: 10px;">Pincode: </label>
+        <input type="text" name="pincode" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <button type="submit" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add Address</button>
+
+    </form>
+
+</body>
+</html>

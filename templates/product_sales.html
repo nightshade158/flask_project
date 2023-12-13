@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Revenue for Each Product</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333; text-transform: uppercase;">SALES REVENUE FOR EACH PRODUCT</h1>
+
+    <table style="margin: 20px auto; border-collapse: collapse; max-width: 800px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+        <tr>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Product ID</th>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Product Name</th>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Total Quantity Sold</th>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Revenue by Product</th>
+        </tr>
+        {% for row in results %}
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ row[0] }}</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ row[1] }}</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ row[2] }}</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ row[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

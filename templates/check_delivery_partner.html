@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Delivery Partner</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Delivery Partner Information</h1>
+
+    <table style="margin: 20px auto; border-collapse: collapse; max-width: 800px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+        <tr>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Order ID</th>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Delivery Partner ID</th>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Delivery Partner Name</th>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Phone Number</th>
+        </tr>
+        {% for info in delivery_info %}
+        <tr>
+            <td style="border: 1px solid #ccc; padding: 10px;">{{ info[0] }}</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">{{ info[1] }}</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">{{ info[2] }}</td>
+            <td style="border: 1px solid #ccc; padding: 10px;">{{ info[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

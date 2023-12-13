@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update or Delete Product</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333; text-transform: uppercase;">Update or Delete Product</h1>
+
+    <form method="post" action="/product_update" style="max-width: 400px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+
+        <label for="product_id" style="font-size: 16px; color: #333;">Product ID:</label>
+        <input type="text" id="product_id" name="product_id" required style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <label for="update_choice" style="font-size: 16px; color: #333;">Choose Action:</label>
+        <select id="update_choice" name="update_choice" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            <option value="update_stock">Update Stock</option>
+            <option value="update_price">Update Price</option>
+            <option value="delete_product">Delete Product</option>
+        </select>
+
+        <label for="stock" style="font-size: 16px; color: #333;">Stock (if updating stock):</label>
+        <input type="number" id="stock" name="stock" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <label for="price" style="font-size: 16px; color: #333;">Price (if updating price):</label>
+        <input type="number" id="price" name="price" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <input type="submit" value="Submit" style="background-color: #333; color: #fff; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+    </form>
+</body>
+</html>

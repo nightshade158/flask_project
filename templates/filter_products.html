@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Products</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Filter Products</h1>
+
+    <form method="post" style="margin: 20px auto; max-width: 600px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+
+        <label for="filter_choice" style="font-size: 16px; margin-top: 10px; display: block;">Filter by:</label>
+        <select name="filter_choice" id="filter_choice" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+            <option value="1">Price</option>
+            <option value="2">Stock</option>
+            <option value="3">Name</option>
+            <option value="4">Rating</option>
+        </select>
+
+        <div id="filter_fields">
+
+            <div id="price_filters" class="filter-section">
+                <label for="min_price" style="font-size: 16px; display: block; margin-top: 10px;">Minimum Price:</label>
+                <input type="number" name="min_price" id="min_price" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+                <label for="max_price" style="font-size: 16px; display: block;">Maximum Price:</label>
+                <input type="number" name="max_price" id="max_price" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div id="stock_filters" class="filter-section">
+                <label for="min_stock" style="font-size: 16px; display: block; margin-top: 10px;">Minimum Stock:</label>
+                <input type="number" name="min_stock" id="min_stock" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+                <label for="max_stock" style="font-size: 16px; display: block;">Maximum Stock:</label>
+                <input type="number" name="max_stock" id="max_stock" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div id="name_filter" class="filter-section">
+                <label for="product_name" style="font-size: 16px; display: block; margin-top: 10px;">Product Name:</label>
+                <input type="text" name="product_name" id="product_name" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+
+            <div id="rating_filters" class="filter-section">
+                <label for="min_rating" style="font-size: 16px; display: block; margin-top: 10px;">Minimum Rating:</label>
+                <input type="number" name="min_rating" id="min_rating" step="0.1" min="0" max="5" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+                <label for="max_rating" style="font-size: 16px; display: block;">Maximum Rating:</label>
+                <input type="number" name="max_rating" id="max_rating" step="0.1" min="0" max="5" style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+            </div>
+        </div>
+        <button type="submit" style="background-color: #333; color: #fff; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">Apply Filter</button>
+    </form>
+</body>
+</html>

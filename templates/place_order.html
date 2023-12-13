@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place Order</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Place Order</h1>
+
+    <form method="post" action="/place_order/{{ customer_id }}" style="max-width: 400px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+
+        <!-- Display the items in the cart here -->
+
+        <p style="font-size: 16px; color: #333;">Are you sure you want to proceed with the above order?</p>
+
+        <label for="choice_order" style="font-size: 16px; color: #333; display: block;">Type 'y' for YES or 'n' for returning to the previous menu:</label>
+        <input type="text" id="choice_order" name="choice_order" required style="font-size: 14px; padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <input type="submit" value="Confirm Order" style="background-color: #333; color: #fff; font-size: 16px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+
+    </form>
+</body>
+</html>

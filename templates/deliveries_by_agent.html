@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number of Deliveries by Each Delivery Agent</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333; text-transform: uppercase;">NUMBER OF DELIVERIES BY EACH DELIVERY AGENT</h1>
+
+    <table style="margin: 20px auto; border-collapse: collapse; max-width: 800px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+        <tr>
+            <th style="background-color: #333; color: #fff; padding: 10px; text-transform: uppercase;">Delivery Agent ID</th>
+            <th style="background-color: #333; color: #fff; padding: 10px; text-transform: uppercase;">First Name</th>
+            <th style="background-color: #333; color: #fff; padding: 10px; text-transform: uppercase;">Last Name</th>
+            <th style="background-color: #333; color: #fff; padding: 10px; text-transform: uppercase;">Number of Deliveries</th>
+        </tr>
+        {% for row in results %}
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ row[0] }}</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ row[1] }}</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ row[2] }}</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ row[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

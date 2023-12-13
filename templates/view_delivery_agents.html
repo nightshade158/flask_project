@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Delivery Agents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>View Delivery Agents</h1>
+    <table>
+        <tr>
+            <th>Delivery Agent ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contact</th>
+        </tr>
+        {% for delivery_agent in delivery_agents %}
+            <tr>
+                <td>{{ delivery_agent[0] }}</td>
+                <td>{{ delivery_agent[1] }}</td>
+                <td>{{ delivery_agent[2] }}</td>
+                <td>{{ delivery_agent[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

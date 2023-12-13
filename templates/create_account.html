@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create an Account</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Create an Account</h1>
+
+    <form method="post" action="{{ url_for('create_account') }}" style="margin: 20px auto; max-width: 400px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+
+        <label for="email" style="display: block; font-size: 16px; margin-top: 10px;">Email:</label>
+        <input type="text" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+
+        <label for="password" style="display: block; font-size: 16px; margin-top: 10px;">Password:</label>
+        <input type="password" name="password" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+
+        <label for="firstname" style="display: block; font-size: 16px; margin-top: 10px;">First Name:</label>
+        <input type="text" name="firstname" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+
+        <label for="lastname" style="display: block; font-size: 16px; margin-top: 10px;">Last Name:</label>
+        <input type="text" name="lastname" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+
+        <label for="contact" style="display: block; font-size: 16px; margin-top: 10px;">Contact:</label>
+        <input type="number" name="contact" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+
+        <label for="dob" style="display: block; font-size: 16px; margin-top: 10px;">Date of Birth:</label>
+        <input type="date" name="dob" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;">
+
+        <!-- Additional form fields as needed (e.g., first name, last name, etc.) -->
+
+        <input type="submit" value="Create Account" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+
+    </form>
+</body>
+</html>

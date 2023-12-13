@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Retail Store</title>
+</head>
+<body style="background-color: #f3f3f3; text-align: center; font-family: Arial, sans-serif;">
+
+    <h1 style="color: #333333; text-decoration: underline;">Welcome to Shopaholics</h1>
+
+    <ul style="list-style-type: none; padding: 0; display: flex; justify-content: center;">
+        <li style="margin: 10px;">
+            <a href="{{ url_for('login') }}" style="text-decoration: none; color: #007bff; background-color: #e6e6e6; padding: 10px 20px; border-radius: 5px;">Login as Customer</a>
+        </li>
+        <li style="margin: 10px;">
+            <a href="{{ url_for('login_employee') }}" style="text-decoration: none; color: #007bff; background-color: #e6e6e6; padding: 10px 20px; border-radius: 5px;">Login as Employee</a>
+        </li>
+        <li style="margin: 10px;">
+            <a href="{{ url_for('add_wallet') }}" style="text-decoration: none; color: #007bff; background-color: #e6e6e6; padding: 10px 20px; border-radius: 5px;">Create an Account</a>
+        </li>
+    </ul>
+
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Product</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Add a New Product</h1>
+
+    <form method="post" action="/add_new_product" style="margin: 20px auto; max-width: 400px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+
+        <label for="product_name" style="display: block; margin-top: 10px;">Product Name:</label>
+        <input type="text" id="product_name" name="product_name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <label for="price" style="display: block; margin-top: 10px;">Price:</label>
+        <input type="number" id="price" name="price" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <label for="stock" style="display: block; margin-top: 10px;">Stock:</label>
+        <input type="number" id="stock" name="stock" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <label for="rating" style="display: block; margin-top: 10px;">Rating:</label>
+        <input type="number" id="rating" name="rating" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <input type="submit" value="Add Product" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+
+    </form>
+</body>
+</html>

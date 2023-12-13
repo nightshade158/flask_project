@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Products</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Filtered Products</h1>
+
+    <p style="font-size: 16px; color: #333;">Filtered by: {{ filter_criteria }}</p>
+
+    <table style="margin: 20px auto; border-collapse: collapse; max-width: 800px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+        <tr>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Name</th>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Price</th>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Rating</th>
+            <th style="background-color: #333; color: #fff; padding: 10px;">Current Stock</th>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ product[0] }}</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ product[1] }}</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ product[2] }}</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">{{ product[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

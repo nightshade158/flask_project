@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>See Wallet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wallet Details</h1>
+    <p>Wallet ID: {{ wallet_id }}</p>
+    <p>Wallet Name: {{ wallet_name }}</p>
+    <p>Amount: ${{ amount }}</p>
+</body>
+</html>

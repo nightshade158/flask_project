@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Money to Wallet</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Add Money to Wallet</h1>
+
+    <form method="post" action="/add_money_to_wallet/{{ customer_id }}" style="margin: 20px auto; max-width: 400px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+
+        <label for="email" style="display: block; margin-top: 10px;">Email:</label>
+        <input type="text" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <label for="password" style="display: block; margin-top: 10px;">Password:</label>
+        <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <label for="amount" style="display: block; margin-top: 10px;">Amount to Add:</label>
+        <input type="text" id="amount" name="amount" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <input type="submit" value="Add Money to Wallet" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+
+    </form>
+
+</body>
+</html>

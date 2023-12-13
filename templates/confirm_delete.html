@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Product Deletion</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f0f0;">
+
+    <h1 style="color: #333;">Confirm Product Deletion</h1>
+
+    <p style="font-size: 18px;">Are you sure you want to delete the following product?</p>
+
+    <p style="font-size: 16px; margin: 10px 0;">Product ID: {{ product[0] }}</p>
+    <p style="font-size: 16px; margin: 10px 0;">Product Name: {{ product[1] }}</p>
+
+    <form method="post" action="/confirm_delete/{{ product[0] }}" style="margin: 20px auto; max-width: 400px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); text-align: left;">
+
+        <label style="font-size: 16px; margin: 10px 0; display: block;">Confirm Deletion:</label>
+        <input type="radio" name="delete" value="yes" style="margin-right: 5px;"> Yes
+        <input type="radio" name="delete" value="no" checked style="margin-left: 15px;"> No
+
+        <input type="submit" value="Submit" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+
+    </form>
+</body>
+</html>
